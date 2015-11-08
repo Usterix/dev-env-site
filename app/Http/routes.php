@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Middleware\MenuSystem;
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -10,7 +10,19 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [
+    'middleware'=> 'menu',
+    'uses' => 'DashboardController@index'
+]);
+Route::get('sites', [
+    'middleware' => 'menu',
+    'uses' => 'SitesController@index'
+]);
+Route::get('server', [
+    'middleware' => 'menu',
+    'uses' => 'ServerController@index'
+]);
+Route::get('logins', [
+    'middleware' => 'menu',
+    'uses' => 'LoginsController@index'
+]);
