@@ -5,8 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Usterix Dev | {{$title}}</title>
         <!-- BOOTSTRAP STYLES-->
-        <link href="{{asset('/css/all.css')}}" rel="stylesheet"/>
+        <link href="{{asset('/css/main.css')}}" rel="stylesheet"/>
         <!-- GOOGLE FONTS-->
+        <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Pathway+Gothic+One' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
     </head>
     <body>
@@ -19,20 +21,16 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html">Binary admin</a>
+                    <a class="navbar-brand" href="index.html">Usterix Dev</a>
                 </div>
-                <div style="color: white;
-padding: 15px 50px 5px 50px;
-float: right;
-font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="login.html"
-                                                       class="btn btn-danger square-btn-adjust">Logout</a></div>
+
             </nav>
             <!-- /. NAV TOP  -->
             <nav class="navbar-default navbar-side" role="navigation">
                 <div class="sidebar-collapse">
                     <ul class="nav" id="main-menu">
                         <li class="text-center">
-                            <img src="assets/img/find_user.png" class="user-image img-responsive"/>
+                            <img src="{{asset('/img/ram-white.png')}}" class="user-image img-responsive"/>
                         </li>
                         @include(config('laravel-menu.views.bootstrap-items'), array('items' => $mainMenu->roots()))
 
